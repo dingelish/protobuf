@@ -143,12 +143,13 @@ class LIBPROTOBUF_EXPORT InternalMetadataWithArena {
   };
 
   GOOGLE_ATTRIBUTE_NOINLINE UnknownFieldSet* mutable_unknown_fields_slow() {
-    Arena* my_arena = arena();
-    Container* container = Arena::Create<Container>(my_arena);
-    ptr_ = reinterpret_cast<void*>(
-        reinterpret_cast<intptr_t>(container) | kTagContainer);
-    container->arena_ = my_arena;
-    return &(container->unknown_fields_);
+    //Arena* my_arena = arena();
+    //Container* container = Arena::Create<Container>(my_arena);
+    //ptr_ = reinterpret_cast<void*>(
+    //    reinterpret_cast<intptr_t>(container) | kTagContainer);
+    //container->arena_ = my_arena;
+    //return &(container->unknown_fields_);
+    return NULL;
   }
 };
 
